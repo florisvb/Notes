@@ -1,8 +1,14 @@
-Pt Grey Fireflies:
+Pt Grey Fireflies (USB) - these use the 1394 standard!
 
 1. Install camera1394 from ROS (search software center after setting up ROS)
 
-2. Create a rule for the camera:
+2. Create a rule for the camera with these contents:
+
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1e10", ATTRS{idProduct}=="2000", GROUP="plugdev", SYMLINK+="firefly", MODE:="0666"
+
+##############################################################
+
+More info:
 
 From: http://askubuntu.com/questions/41402/how-do-i-get-opencv-and-firefly-mv-working
 
